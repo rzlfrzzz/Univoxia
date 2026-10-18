@@ -1,0 +1,24 @@
+{
+  "name": "univoxia",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["apps/server"],
+  "scripts": {
+    "dev:server": "tsx watch apps/server/src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start:server": "node dist/apps/server/src/index.js",
+    "db:migrate": "node dist/scripts/migrate.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "@types/pg": "^8.11.11",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
